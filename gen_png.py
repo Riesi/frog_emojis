@@ -19,3 +19,4 @@ for f in files:
     name = ntpath.basename(f).replace(".svg", "")
     for s in sizes:
         subprocess.run(["inkscape", "-z", "-C", "-w", str(s), "-e", "./png/"+str(s)+"/"+name+".png", "-f", f])
+#        subprocess.run(["inkscape", "-z", "-C", "-w", str(s), "--export-file=./png/"+str(s)+"/"+name+".png", f])        
