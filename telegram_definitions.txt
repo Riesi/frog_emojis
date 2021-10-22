@@ -1,0 +1,7 @@
+frog.png|🐸
+frog_2b.png|🤖
+policefrog.png|👮
+frogfamily1.png|👨‍👩‍👦
+frogcat.png|🐱
+msfrog.png|🐸
+winefrog.png|🍷
