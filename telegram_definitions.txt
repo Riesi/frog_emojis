@@ -5,3 +5,4 @@ frogfamily1.png|👨‍👩‍👦
 frogcat.png|🐱
 msfrog.png|🐸
 winefrog.png|🍷
+frogbeer.png|🍻
