@@ -29,13 +29,13 @@ frogkiss.png|😘
 froglobster.png|🦐
 frog_mask.png|😷
 frogmouse.png|🖦
-'frog music.png'|🎧
+frog music.png|🎧
 frogOclock.png|🕰️⏰
 frogpalm.png|🤦
 frogpineappleSam.png|🍍
 frog_popcorn.png|🍿
-'frog potato 2.png|'🥔
-'frog potato.png|'🥔
+frog potato 2.png|🥔
+frog potato.png|🥔
 frogpray.png|🙏
 frogpyramid.png|🔺
 frogrip.png|☠️
@@ -44,7 +44,7 @@ frogshrug.png|🤷
 frog_signal.png|🌃
 frogsleepy.png|😴
 frogsnowman_green.png|☃️
-'frogsnowman_green_without snow.png'|⛄
+frogsnowman_green_without snow.png|⛄
 frogs.png|🐸
 frogstalker.png|🕵️
 frogstargreen.png|⭐
