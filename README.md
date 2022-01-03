@@ -1,4 +1,11 @@
-All theses frogs are based on the SVGs of the twitter emoji set (https://twemoji.twitter.com).
-The license is the same as of the twitter emoji's and can be found in the LICENSE file.
+Most of theses frogs are based on the SVGs of the twitter emoji set (https://twemoji.twitter.com). Others are unique designs with other inspirations in mind.
 
-🐸
+Have fun using them! 🐸
+
+## License
+
+By contributing you agree to license your contribution under the terms of the GPLv3 (for code) and CC-BY 4.0 (for graphics) licenses. The corresponding license can be found in the LICENCE and LICENSE-GRAPHICS file respectively. The following links also reference to the licenses:
+
+GPLv3: <http://www.gnu.org/licenses/gpl-3.0.txt>
+
+CC-BY 4.0: <https://github.com/twitter/twemoji/blob/gh-pages/LICENSE-GRAPHICS>
