@@ -24,8 +24,15 @@ def raster_graphics(files):
         print('\n------------------------------\n'+ str(frogs) + ' remaining...\nRastering ' + str(name)+'\n')
         frogs = frogs - 1
         for s in sizes:
-            subprocess.run(["inkscape", f, "-C", "-w", str(s), "--export-filename=./png/fixed_width/"+str(s)+"/"+name+".png"],timeout=30)
-            subprocess.run(["inkscape", f, "-C", "-h", str(s), "--export-filename=./png/fixed_height/"+str(s)+"/"+name+".png"],timeout=30)
+            # make sure the subdirectories exist
+            width_path = "./png/fixed_width/"+str(s)+"/"+str(os.path.dirname(f.removeprefix('svg/').removesuffix('.svg')))
+            height_path = "./png/fixed_height/"+str(s)+"/"+str(os.path.dirname(f.removeprefix('svg/').removesuffix('.svg')))
+            if not( os.path.exists(width_path) and os.path.exists(height_path) ):
+                os.makedirs(width_path ,exist_ok=True)
+                os.makedirs(height_path ,exist_ok=True)
+            # invoke Inkscape to raster the given vector graphics
+            subprocess.run(["inkscape", f, "-C", "-w", str(s), "--export-filename="+str(width_path)+"/"+name+".png"],timeout=30)
+            subprocess.run(["inkscape", f, "-C", "-h", str(s), "--export-filename="+str(height_path)+"/"+name+".png"],timeout=30)
 
 # git add given files
 def git_add_raster(files):
@@ -92,10 +99,11 @@ if len(sys.argv) == 1:
     create_tag()
 else:
     if sys.argv[1] == 'all':
-        files = [f for f in glob.glob("./svg**/*.svg", recursive=True)]
+        files = [f for f in glob.glob("svg**/*.svg", recursive=True)]
     else:
         for f in sys.argv:
-            if os.path.exists("./svg/"+f+".svg"):
-                files.append("./svg/"+f+".svg")
+            f = f.removeprefix('svg/').removesuffix('.svg')
+            if os.path.exists("svg/"+f+".svg"):
+                files.append("svg/"+f+".svg")
     raster_graphics(files)
 
