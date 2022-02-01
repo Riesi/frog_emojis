@@ -14,4 +14,4 @@ CC-BY 4.0: <https://github.com/twitter/twemoji/blob/gh-pages/LICENSE-GRAPHICS>
 When submitting PRs keep the following in mind please:
 
 - only submit SVGs.
-- don't have spaces in your file names. Use underscore_case or camelCase instead.
+- don't have spaces in your file names. Use snake_case or camelCase instead.
