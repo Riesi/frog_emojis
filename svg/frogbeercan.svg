@@ -11,12 +11,11 @@
 	.st3{fill:url(#path4578_1_);stroke:#000000;stroke-width:1.6149;stroke-miterlimit:4.2414;}
 	.st4{fill:#00E1FF;}
 	.st5{fill:#088830;}
-	.st6{clip-path:url(#SVGID_2_);}
-	.st7{fill:#C6E5B3;}
-	.st8{fill:#77B255;}
-	.st9{fill:#FFFFFF;}
-	.st10{fill:#292F33;}
-	.st11{fill:#5C913B;}
+	.st6{fill:#C6E5B3;}
+	.st7{fill:#77B255;}
+	.st8{fill:#FFFFFF;}
+	.st9{fill:#292F33;}
+	.st10{fill:#5C913B;}
 </style>
 <g id="g4801" transform="matrix(0.36094114,-0.09823343,0.09823343,0.36094114,40.187907,149.94651)">
 	<g>
@@ -51,53 +50,40 @@
 			<path id="path4653" sodipodi:cx="105.23846" sodipodi:cy="167.77911" sodipodi:end="6.2242941" sodipodi:rx="28.518709" sodipodi:ry="11.331939" sodipodi:start="0.42536293" sodipodi:type="arc" class="st5" d="
 			M320.3,87.6c-16.9,14.8-58.9,22.3-97.9,17.4c-39-4.9-62.7-20.5-55.3-36.5c7.4-16,43.7-27.2,84.5-26.2s73.3,14,75.7,30.2l-80.7,1.9
 			L320.3,87.6z"/>
-		<g id="g10-7" transform="matrix(1.2574771,0,0,-1.2574771,81.997752,164.71557)">
-			<g id="g12-5">
-				<g>
-					<defs>
-						
-							<rect id="SVGID_1_" x="105.6" y="105.8" transform="matrix(0.9649 -0.2626 0.2626 0.9649 -29.5475 38.5868)" width="48" height="48"/>
-					</defs>
-					<clipPath id="SVGID_2_">
-						<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-					</clipPath>
-					<g id="g14-3" class="st6">
-						<g id="g20-5" transform="translate(36,14)">
-							<path id="path22-6" inkscape:connector-curvature="0" class="st7" d="M144.6,104.5c0-21.1-22.8-34-51-34s-51,12.9-51,34
-								c0,21.1,22.8,42.5,51,42.5S144.6,125.6,144.6,104.5"/>
-						</g>
-						<g id="g24-2" transform="translate(31.7549,23.3242)">
-							<path id="path26-9" inkscape:connector-curvature="0" class="st8" d="M136.8,121.6c3.9,3.1,6.4,7.9,6.4,13.3
-								c0,9.4-7.6,17-17,17c-8.1,0-14.9-5.7-16.6-13.3c-3.7,1.4-7.6,2.1-11.8,2.1c-4.2,0-8.1-0.8-11.8-2.1
-								c-1.7,7.6-8.5,13.3-16.6,13.3c-9.4,0-17-7.6-17-17c0-5.4,2.5-10.1,6.4-13.3c-7.5-7.6-12-17-12-26.4c0-21.1,22.8-2.8,51-2.8
-								c28.2,0,51-18.3,51,2.8C148.9,104.6,144.3,114,136.8,121.6"/>
-						</g>
-						<g id="g28-1" transform="translate(11,28.5)">
-							<path id="path30-2" inkscape:connector-curvature="0" class="st9" d="M98.7,131.1c0-5.5-4.4-9.9-9.9-9.9
-								c-5.5,0-9.9,4.4-9.9,9.9c0,5.5,4.4,9.9,9.9,9.9C94.3,141,98.7,136.6,98.7,131.1"/>
-						</g>
-						<g id="g32-7" transform="translate(9,28.5)">
-							<path id="path34-0" inkscape:connector-curvature="0" class="st10" d="M95.1,131.1c0-2.3-1.9-4.3-4.3-4.3s-4.3,1.9-4.3,4.3
-								c0,2.3,1.9,4.3,4.3,4.3S95.1,133.4,95.1,131.1"/>
-						</g>
-						<g id="g36-9" transform="translate(32,28.5)">
-							<path id="path38-3" inkscape:connector-curvature="0" class="st9" d="M137.3,131.1c0-5.5-4.4-9.9-9.9-9.9s-9.9,4.4-9.9,9.9
-								c0,5.5,4.4,9.9,9.9,9.9C132.8,141,137.3,136.6,137.3,131.1"/>
-						</g>
-						<g id="g40-6" transform="translate(30,28.5)">
-							<path id="path42-0" inkscape:connector-curvature="0" class="st10" d="M133.6,131.1c0-2.3-1.9-4.3-4.3-4.3
-								c-2.3,0-4.3,1.9-4.3,4.3c0,2.3,1.9,4.3,4.3,4.3C131.7,135.4,133.6,133.4,133.6,131.1"/>
-						</g>
-						<g id="g44-6" transform="translate(15,16)">
-							<path id="path46-2" inkscape:connector-curvature="0" class="st11" d="M106.1,108.2c0-1.6-1.3-2.8-2.8-2.8
-								c-1.6,0-2.8,1.3-2.8,2.8c0,1.6,1.3,2.8,2.8,2.8S106.1,109.7,106.1,108.2"/>
-						</g>
-						<g id="g48-6" transform="translate(23,16)">
-							<path id="path50-1" inkscape:connector-curvature="0" class="st11" d="M120.8,108.2c0-1.6-1.3-2.8-2.8-2.8s-2.8,1.3-2.8,2.8
-								c0,1.6,1.3,2.8,2.8,2.8S120.8,109.7,120.8,108.2"/>
-						</g>
-					</g>
-				</g>
+		<g id="g14-3">
+			<g id="g20-5" transform="translate(36,14)">
+				<path id="path22-6" inkscape:connector-curvature="0" class="st6" d="M273.1,1.7c0,26.6-28.7,42.8-64.2,42.8
+					c-35.4,0-64.2-16.2-64.2-42.8c0-26.6,28.7-53.5,64.2-53.5C244.4-51.8,273.1-24.9,273.1,1.7"/>
+			</g>
+			<g id="g24-2" transform="translate(31.7549,23.3242)">
+				<path id="path26-9" inkscape:connector-curvature="0" class="st7" d="M262.2-40.9c4.9-3.9,8-9.9,8-16.7
+					c0-11.8-9.6-21.4-21.4-21.4c-10.2,0-18.7,7.1-20.9,16.7c-4.6-1.7-9.6-2.7-14.8-2.7c-5.2,0-10.2,1-14.8,2.7
+					c-2.1-9.6-10.7-16.7-20.9-16.7c-11.8,0-21.4,9.6-21.4,21.4c0,6.7,3.1,12.7,8,16.7C154.7-31.3,149-19.4,149-7.6
+					c0,26.6,28.7,3.6,64.2,3.6c35.4,0,64.2,23,64.2-3.6C277.4-19.4,271.7-31.3,262.2-40.9"/>
+			</g>
+			<g id="g28-1" transform="translate(11,28.5)">
+				<path id="path30-2" inkscape:connector-curvature="0" class="st8" d="M209-64.5c0,6.9-5.6,12.5-12.5,12.5
+					c-6.9,0-12.5-5.6-12.5-12.5c0-6.9,5.6-12.5,12.5-12.5C203.4-77,209-71.4,209-64.5"/>
+			</g>
+			<g id="g32-7" transform="translate(9,28.5)">
+				<path id="path34-0" inkscape:connector-curvature="0" class="st9" d="M203.9-64.5c0,3-2.4,5.3-5.3,5.3c-3,0-5.3-2.4-5.3-5.3
+					c0-3,2.4-5.3,5.3-5.3C201.5-69.8,203.9-67.4,203.9-64.5"/>
+			</g>
+			<g id="g36-9" transform="translate(32,28.5)">
+				<path id="path38-3" inkscape:connector-curvature="0" class="st8" d="M262.9-64.5c0,6.9-5.6,12.5-12.5,12.5
+					c-6.9,0-12.5-5.6-12.5-12.5c0-6.9,5.6-12.5,12.5-12.5C257.3-77,262.9-71.4,262.9-64.5"/>
+			</g>
+			<g id="g40-6" transform="translate(30,28.5)">
+				<path id="path42-0" inkscape:connector-curvature="0" class="st9" d="M257.7-64.5c0,3-2.4,5.3-5.3,5.3c-3,0-5.3-2.4-5.3-5.3
+					c0-3,2.4-5.3,5.3-5.3C255.3-69.8,257.7-67.4,257.7-64.5"/>
+			</g>
+			<g id="g44-6" transform="translate(15,16)">
+				<path id="path46-2" inkscape:connector-curvature="0" class="st10" d="M219.3-7.4c0,2-1.6,3.6-3.6,3.6c-2,0-3.6-1.6-3.6-3.6
+					c0-2,1.6-3.6,3.6-3.6S219.3-9.4,219.3-7.4"/>
+			</g>
+			<g id="g48-6" transform="translate(23,16)">
+				<path id="path50-1" inkscape:connector-curvature="0" class="st10" d="M239.8-7.4c0,2-1.6,3.6-3.6,3.6c-2,0-3.6-1.6-3.6-3.6
+					s1.6-3.6,3.6-3.6C238.2-11,239.8-9.4,239.8-7.4"/>
 			</g>
 		</g>
 	</g>
