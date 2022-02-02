@@ -15,3 +15,20 @@ When submitting PRs keep the following in mind please:
 
 - only submit SVGs.
 - don't have spaces in your file names. Use snake_case or camelCase instead.
+- only submit SVGs with the file ending `.svg`. Not `.SVG` or `.sVg`
+
+## Generating PNGs 
+If you want to generate PNGs from the SVGs, you can use the `gen_png.py` script.
+
+### Dependencies
+- Python 3.9 - To run the script.
+- Inkscape - Used to generate the PNGs. Needs to be located in PATH.
+- (Optional) git - Can be used to automatically add a new commit with the generated PNGs.
+
+### Usage
+gen_png.py [OPTION]
+
+-h, --help                      Shows this help message.
+-a, --all                       Regenerates all PNGs.
+-s, --specific [FILENAME]...    Regenerate the PNGs for each FILENAME in the "svg" folder. The '.svg' suffix is optional.
+-g, --git                       Regenerates all PNGs and creates a git commit for them. Requires 'git' to be installed and located in PATH.
