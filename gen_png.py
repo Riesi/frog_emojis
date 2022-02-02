@@ -116,7 +116,7 @@ elif sys.argv[1] == 'git':
     create_tag()
 else:
     if sys.argv[1] == 'all':
-        files = [f for f in glob.glob("svg**/*.svg", recursive=True)]
+        files = [f for f in glob.glob("svg/**/*.svg", recursive=True)]
     else:
         for f in sys.argv:
             f = f.removeprefix('svg/').removesuffix('.svg')
