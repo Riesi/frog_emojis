@@ -1,1 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2096.02 2096.02"><defs><style>.cls-1{fill:#c6e5b3;}.cls-2{fill:#77b255;}.cls-3{fill:#bbdefb;}.cls-4{fill:#5c913b;}.cls-5{fill:#fff;}.cls-6{fill:#292f33;}.cls-7{fill:none;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><path class="cls-1" d="M1711.14,1826v75.67S1711.14,2096,1470,2096H626s-241.14,0-241.14-194.33V1826C807.32,1718.81,1250.26,1723.49,1711.14,1826Z"/><path class="cls-2" d="M1711.14,541.39V1826c-460.88-102.53-903.82-107.21-1326.26,0V541.39s0-194.33,241.14-194.33h844S1711.14,347.06,1711.14,541.39Z"/><path class="cls-3" d="M548,468.59H1548.05a42.51,42.51,0,0,1,42.52,42.52V1801.2a42.52,42.52,0,0,1-42.52,42.52H548a42.52,42.52,0,0,1-42.52-42.52V511.11A42.52,42.52,0,0,1,548,468.59Z"/><circle class="cls-4" cx="1044.3" cy="1957.67" r="90.62"/><circle class="cls-2" cx="649.3" cy="229.4" r="229.4"/><circle class="cls-5" cx="652.92" cy="226.76" r="185.09"/><circle class="cls-6" cx="652.92" cy="226.76" r="79.43"/><circle class="cls-2" cx="1445.41" cy="229.4" r="229.4"/><circle class="cls-5" cx="1441.73" cy="226.76" r="185.09"/><circle class="cls-6" cx="1441.73" cy="226.76" r="79.43"/><rect class="cls-7" width="2096.02" height="2096.02"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 2096.02 2096.02"
+   version="1.1"
+   id="svg30"
+   sodipodi:docname="ifrog.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview32"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="3.4007309"
+     inkscape:cx="1660.6724"
+     inkscape:cy="1780.3526"
+     inkscape:window-width="1920"
+     inkscape:window-height="1026"
+     inkscape:window-x="1920"
+     inkscape:window-y="54"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Ebene_1-2" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#c6e5b3;}.cls-2{fill:#77b255;}.cls-3{fill:#bbdefb;}.cls-4{fill:#5c913b;}.cls-5{fill:#fff;}.cls-6{fill:#292f33;}.cls-7{fill:none;}</style>
+  </defs>
+  <g
+     id="Ebene_2"
+     data-name="Ebene 2">
+    <g
+       id="Ebene_1-2"
+       data-name="Ebene 1">
+      <path
+         class="cls-1"
+         d="m 1711.14,1826 v 75.67 c 0,0 0,194.33 -241.14,194.33 H 626 c 0,0 -241.14,0 -241.14,-194.33 V 1826 c 101.58725,-379.1288 1229.6483,-360.6343 1326.28,0 z"
+         id="path6"
+         sodipodi:nodetypes="ccscscc" />
+      <path
+         class="cls-2"
+         d="M1711.14,541.39V1826c-460.88-102.53-903.82-107.21-1326.26,0V541.39s0-194.33,241.14-194.33h844S1711.14,347.06,1711.14,541.39Z"
+         id="path8" />
+      <path
+         class="cls-3"
+         d="M548,468.59H1548.05a42.51,42.51,0,0,1,42.52,42.52V1801.2a42.52,42.52,0,0,1-42.52,42.52H548a42.52,42.52,0,0,1-42.52-42.52V511.11A42.52,42.52,0,0,1,548,468.59Z"
+         id="path10" />
+      <circle
+         class="cls-4"
+         cx="1044.3"
+         cy="1957.67"
+         r="90.62"
+         id="circle12" />
+      <circle
+         class="cls-2"
+         cx="649.3"
+         cy="229.4"
+         r="229.4"
+         id="circle14" />
+      <circle
+         class="cls-5"
+         cx="652.92"
+         cy="226.76"
+         r="185.09"
+         id="circle16" />
+      <circle
+         class="cls-6"
+         cx="652.92"
+         cy="226.76"
+         r="79.43"
+         id="circle18" />
+      <circle
+         class="cls-2"
+         cx="1445.41"
+         cy="229.4"
+         r="229.4"
+         id="circle20" />
+      <circle
+         class="cls-5"
+         cx="1441.73"
+         cy="226.76"
+         r="185.09"
+         id="circle22" />
+      <circle
+         class="cls-6"
+         cx="1441.73"
+         cy="226.76"
+         r="79.43"
+         id="circle24" />
+      <rect
+         class="cls-7"
+         width="2096.02"
+         height="2096.02"
+         id="rect26" />
+    </g>
+  </g>
+</svg>
