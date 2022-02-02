@@ -34,7 +34,7 @@ def delete_graphics(name):
 
 # rasters SVGs via Inkscape
 def raster_graphics(files):
-    sizes = [16, 32, 64, 128, 256, 512, 1024, 4096]
+    sizes = [72, 512, 1024]
     frogs = len(files)-1
     for f in files:
         name = ntpath.basename(f).replace(".svg", "")
@@ -42,14 +42,11 @@ def raster_graphics(files):
         frogs = frogs - 1
         for s in sizes:
             # make sure the subdirectories exist
-            width_path = "./png/fixed_width/"+str(s)+"/"+str(os.path.dirname(f.removeprefix('svg/').removesuffix('.svg')))
-            height_path = "./png/fixed_height/"+str(s)+"/"+str(os.path.dirname(f.removeprefix('svg/').removesuffix('.svg')))
-            if not( os.path.exists(width_path) and os.path.exists(height_path) ):
-                os.makedirs(width_path ,exist_ok=True)
-                os.makedirs(height_path ,exist_ok=True)
+            raster_path = "./png/"+str(s)+"/"+str(os.path.dirname(f.removeprefix('svg/').removesuffix('.svg')))
+            if not(os.path.exists(raster_path) ):
+                os.makedirs(raster_path ,exist_ok=True)
             # invoke Inkscape to raster the given vector graphics
-            subprocess.run(["inkscape", f, "-C", "-w", str(s), "--export-filename="+str(width_path)+"/"+name+".png"],timeout=30)
-            subprocess.run(["inkscape", f, "-C", "-h", str(s), "--export-filename="+str(height_path)+"/"+name+".png"],timeout=30)
+            subprocess.run(["inkscape", f, "-C", "-h", str(s), "--export-filename="+str(raster_path)+"/"+name+".png"],timeout=30)
 
 # git add given files
 def git_add_raster(files):
@@ -78,6 +75,9 @@ def create_tag():
 #
 files = list()
 if len(sys.argv) == 1:
+    print("Help text missing!")
+    exit(1)
+elif sys.argv[1] == 'git':
     # get modified, added, renamed, deleted SVGs since last tag
     stream = os.popen('git diff --name-status $(git describe --tags --abbrev=0 --match "auto-v*") HEAD | grep svg/')
     output = stream.read()
