@@ -26,9 +26,11 @@ If you want to generate PNGs from the SVGs, you can use the `gen_png.py` script.
 - (Optional) git - Can be used to automatically add a new commit with the generated PNGs.
 
 ### Usage
+```
 gen_png.py [OPTION]
 
 -h, --help                      Shows this help message.
 -a, --all                       Regenerates all PNGs.
 -s, --specific [FILENAME]...    Regenerate the PNGs for each FILENAME in the "svg" folder. The '.svg' suffix is optional.
 -g, --git                       Regenerates all PNGs and creates a git commit for them. Requires 'git' to be installed and located in PATH.
+```
