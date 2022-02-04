@@ -32,6 +32,6 @@ gen_png.py [OPTION]
 -h, --help                      Shows this help message.
 -a, --all                       Generate PNGs of all SVGs.
 -s, --specific S [S ...]        Generate PNGs for each S in the "svg" folder. The '.svg' suffix is optional.
--r, --resolution R [R ...]      Custom resolutions that will be generated instead of the defaults.
+-r, --resolution R [R ...]      Custom resolutions that will be generated instead of the defaults (72, 512, 1024).
 -g, --git                       Generates PNGs of SVGs that changed since last auto tag and creates a git commit with them. Requires 'git' to be installed and located in PATH.
 ```

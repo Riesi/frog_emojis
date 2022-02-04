@@ -93,7 +93,7 @@ def main():
                              help="Generate PNGs for each S in the \"svg\" folder. " +
                                   "The '.svg' suffix is optional.")
     parser.add_argument("-r", "--resolution", metavar='R', type=int, nargs="+",
-                        help="Custom resolutions that will be generated instead of the defaults.")
+                        help="Custom resolutions that will be generated instead of the defaults (72, 512, 1024).")
     mutex_group.add_argument("-g", "--git", action="store_true",
                              help="Generates PNGs of SVGs that changed since last auto tag and creates a git commit with them. " +
                                   "Requires 'git' to be installed and located in PATH.")
