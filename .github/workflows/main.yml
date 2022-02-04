@@ -1,0 +1,69 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Test Square SVGs
+
+# Triggers the workflow on push / pull request events but only for the svg folder
+on:
+  push:
+    paths: svg/
+  pull_request:
+    paths: svg/
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Install Inkscape
+        run: apt install inkscape
+
+      - name: Check Viewbox parameters
+        run: |
+          # Enables globstar to recursively go through folders
+          shopt -s globstar
+          errArr=()
+          for f in ./**/*.svg 
+          do
+            # Gets everything in between the viewBox quotes
+            vbStr=$(cat $f)
+            vbStr=${vbStr##*viewBox=\"}
+            vbStr=${vbStr%%\"*}
+
+            # sets x, y, width, height params
+            vbArr=($vbStr)
+            x=${vbArr[0]}
+            y=$(vbArr[1]}
+            w=$(vbArr[2]}
+            h=$(vbArr[3]}
+
+            # Check that x and y are 0
+            if [[ $x != 0 || $y != 0 ]] ; then
+              errArr+=("$f has x: $x and y: $y")
+            fi
+
+            # Check that width and height are equal
+            if [[ $w != $h ]] ; then
+              errArr+=("$f has width: $w and height: $h")
+            fi
+            
+            # Check that svg is not 1 line
+            if [[ $(wc -l < $f) == 0 ]] ; then
+              errArr+=("$f is only one line!")
+            fi
+          done
+      - name: Post results
+        run: |
+          if [[ ${#errArr[@]} != 0 ] ; then
+            for errMess in "${errArr[@]}"
+            do
+              echo $errMess
+            done
+            exit 1
+          fi
+          echo "No Errors!
