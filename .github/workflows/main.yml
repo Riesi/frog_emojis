@@ -54,7 +54,7 @@ jobs:
 
             # Check that viewbox' width and height are equal
             if [[ $vbW != $vbH ]] ; then
-              errArr+=("$f has viewbox' width: $vbW and height: $vbH")
+              errArr+=("$f has viewbox -width: $vbW and -height: $vbH")
             fi
 
             # Check if normal width/height parameters exist and
@@ -68,7 +68,7 @@ jobs:
               w=${svgTags##*width=\"}
               w=${h%%\"*}
               if [[ $w != $vbW ]] ; then
-                errArr+=("$f has width: $w but viewbox width: $vbW")
+                errArr+=("$f has width: $w but viewbox-width: $vbW")
               fi
             fi
 
@@ -77,7 +77,7 @@ jobs:
               h=${svgTags##*height=\"}
               h=${h%%\"*}
               if [[ $h != $vbH ]] ; then
-                errArr+=("$f has height: $h but viewbox height: $vbH")
+                errArr+=("$f has height: $h but viewbox-height: $vbH")
               fi
             fi
             
