@@ -23,13 +23,14 @@ jobs:
       - name: Install Inkscape
         run: sudo apt install inkscape
 
-      - name: Check Viewbox parameters
+      - name: Check SVG validity
         run: |
           # Enables globstar to recursively go through folders
           shopt -s globstar
           errArr=()
           for f in ./**/*.svg 
           do
+            echo "Checking '$f'"
             # Gets everything in between the viewBox quotes
             vbStr=$(cat $f)
             vbStr=${vbStr##*viewBox=\"}
@@ -57,9 +58,8 @@ jobs:
               errArr+=("$f is only one line!")
             fi
           done
-           if [[ ${#errArr[@]} != 0 ]] ; then echo "this should get hit" ; fi
-      - name: Post results
-        run: |
+          
+          # Results
           if [[ ${#errArr[@]} != 0 ]] ; then
             for errMess in "${errArr[@]}"
             do
