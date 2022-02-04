@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  Test-SVGs:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +31,12 @@ jobs:
           for f in ./**/*.svg 
           do
             echo "Checking '$f'"
+            
+            # Checking if file contains space in path
+            if [[ $f == *\ * ]] ; then
+              errArr+=("$f contains a space!")
+            fi
+            
             # Gets everything in between the viewBox quotes
             vbStr=$(cat $f)
             vbStr=${vbStr##*viewBox=\"}
