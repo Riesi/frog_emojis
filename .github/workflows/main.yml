@@ -1,4 +1,4 @@
-name: Test Square SVGs
+name: Test SVGs
 
 # Triggers the workflow on push / pull request events but only for the svg folder
 on:
@@ -42,19 +42,43 @@ jobs:
 
             # sets x, y, width, height params
             vbArr=($vbStr)
-            x=${vbArr[0]}
-            y=${vbArr[1]}
-            w=${vbArr[2]}
-            h=${vbArr[3]}
+            vbX=${vbArr[0]}
+            vbY=${vbArr[1]}
+            vbW=${vbArr[2]}
+            vbH=${vbArr[3]}
 
-            # Check that x and y are 0
-            if [[ $x != 0 || $y != 0 ]] ; then
-              errArr+=("$f has x: $x and y: $y")
+            # Check that viewbox' x and y are 0
+            if [[ $vbX != 0 || $vbY != 0 ]] ; then
+              errArr+=("$f has viewBox' x: $vbX and y: $vbY")
             fi
 
-            # Check that width and height are equal
-            if [[ $w != $h ]] ; then
-              errArr+=("$f has width: $w and height: $h")
+            # Check that viewbox' width and height are equal
+            if [[ $vbW != $vbH ]] ; then
+              errArr+=("$f has viewbox' width: $vbW and height: $vbH")
+            fi
+
+            # Check if normal width/height parameters exist and
+            # if yes, compare them with viewBox height/width
+            svgTags=$(cat $f)
+            svgTags=${svgTags##*\<svg}
+            svgTags=${svgTags%%\>*}
+            
+            # Width comparison
+            if [[ $svgTags == *width* ]] ; then
+              w=${svgTags##*width=\"}
+              w=${h%%\"*}
+              if [[ $w != $vbW ]] ; then
+                errArr+=("$f has width: $w but viewbox width: $vbW")
+              fi
+            fi
+
+            # Height comparison
+            if [[ $svgTags == *height* ]] ; then
+              h=${svgTags##*height=\"}
+              h=${h%%\"*}
+              if [[ $h != $vbH ]] ; then
+                errArr+=("$f has height: $h but viewbox height: $vbH")
+              fi
             fi
             
             # Check that svg is not 1 line
