@@ -38,9 +38,9 @@ jobs:
             # sets x, y, width, height params
             vbArr=($vbStr)
             x=${vbArr[0]}
-            y=$(vbArr[1]}
-            w=$(vbArr[2]}
-            h=$(vbArr[3]}
+            y=${vbArr[1]}
+            w=${vbArr[2]}
+            h=${vbArr[3]}
 
             # Check that x and y are 0
             if [[ $x != 0 || $y != 0 ]] ; then
