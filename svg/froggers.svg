@@ -1,1 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373.43 373.43"><defs><style>.cls-1{fill:#c6e5b3;}.cls-2{fill:#77b255;}.cls-3{fill:#fff;}.cls-4,.cls-8{fill:#292f33;}.cls-5,.cls-7,.cls-9{fill:none;}.cls-5{stroke:#c6e5b3;}.cls-5,.cls-7,.cls-8{stroke-linecap:round;}.cls-5,.cls-7{stroke-miterlimit:10;}.cls-5,.cls-8{stroke-width:7px;}.cls-6{fill:#5c913b;}.cls-7,.cls-8{stroke:#5c913b;}.cls-7{stroke-width:8px;}.cls-8{stroke-linejoin:round;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><path class="cls-1" d="M373.43,228.21c0,77.34-83.6,124.47-186.72,124.47S0,305.55,0,228.21,83.6,72.61,186.71,72.61,373.43,150.87,373.43,228.21Z"/><path class="cls-2" d="M329.4,131.49a62.22,62.22,0,1,0-99.65-62.15,121.74,121.74,0,0,0-86.07,0A62.22,62.22,0,1,0,44,131.49C16.6,159.29,0,193.82,0,228.21c0,71.66,60.11,14.86,186.71,14.86,124.22,0,186.72,59.14,186.72-14.86C373.43,193.82,356.83,159.29,329.4,131.49Z"/><path class="cls-3" d="M297.78,41.49a36.31,36.31,0,0,1,36.3,36.31c0,20-7.6,22.31-27.65,22.31s-45-2.26-45-22.31A36.31,36.31,0,0,1,297.78,41.49Z"/><circle class="cls-4" cx="314.81" cy="77.8" r="15.56"/><path class="cls-5" d="M309.2,32.72c-30.52-5.2-48.93,7.92-58.14,39"/><path class="cls-3" d="M79.82,41.49A36.31,36.31,0,0,1,116.13,77.8c0,20-7.6,22.31-27.65,22.31s-45-2.26-45-22.31A36.31,36.31,0,0,1,79.82,41.49Z"/><circle class="cls-4" cx="96.85" cy="77.8" r="15.56"/><path class="cls-5" d="M94.74,33.19C62.47,28.16,28.93,43.82,36,88.43"/><circle class="cls-6" cx="191.01" cy="207.46" r="10.37"/><circle class="cls-6" cx="230.95" cy="207.46" r="10.37"/><path class="cls-7" d="M211.15,119.48c-.69,27.15,5.1,49.85,25.43,62.6"/><line class="cls-7" x1="163.02" y1="192.65" x2="137.98" y2="222"/><path class="cls-8" d="M150.5,244.61c54.52,28.64,63.25,74.12,107.61,73.65,31.69-.34,61.24-33.85,29.34-52.05C336.37,200.28,194.58,244.74,150.5,244.61Z"/><line class="cls-8" x1="264.37" y1="214.95" x2="294.16" y2="236.23"/><rect class="cls-9" width="373.43" height="373.43"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 373.4 373.4" style="enable-background:new 0 0 373.4 373.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C6E5B3;}
+	.st1{fill:#77B255;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#292F33;}
+	.st4{fill:none;stroke:#C6E5B3;stroke-width:7;stroke-linecap:round;stroke-miterlimit:10;}
+	.st5{fill:#5C913B;}
+	.st6{fill:none;stroke:#5C913B;stroke-width:8;stroke-linecap:round;stroke-miterlimit:10;}
+	.st7{fill:#292F33;stroke:#5C913B;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+	.st8{fill:none;stroke:#5C913B;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+	.st9{fill:none;}
+</style>
+<g id="Ebene_2_1_">
+	<g id="Ebene_1-2">
+		<path class="st0" d="M373.4,228.2c0,77.3-83.6,124.5-186.7,124.5S0,305.5,0,228.2S83.6,72.6,186.7,72.6S373.4,150.9,373.4,228.2z"
+			/>
+		<path class="st1" d="M329.4,131.5C356.2,110,360.5,70.8,339,44c-21.5-26.8-60.7-31.1-87.5-9.6c-11,8.8-18.7,21.1-21.8,34.9
+			c-27.7-10.5-58.3-10.5-86.1,0c-7.5-33.5-40.8-54.6-74.4-47.1S14.7,63.1,22.3,96.6c3.1,13.7,10.8,26,21.7,34.8
+			c-27.4,27.8-44,62.3-44,96.7c0,71.7,60.1,14.9,186.7,14.9c124.2,0,186.7,59.1,186.7-14.9C373.4,193.8,356.8,159.3,329.4,131.5z"/>
+		<path class="st2" d="M297.8,41.5c20,0,36.3,16.3,36.3,36.3c0,20-7.6,22.3-27.6,22.3s-45-2.3-45-22.3
+			C261.4,57.7,277.7,41.5,297.8,41.5C297.8,41.5,297.8,41.5,297.8,41.5z"/>
+		<circle class="st3" cx="314.8" cy="77.8" r="15.6"/>
+		<path class="st4" d="M309.2,32.7c-30.5-5.2-48.9,7.9-58.1,39"/>
+		<path class="st2" d="M79.8,41.5c20.1,0,36.3,16.3,36.3,36.3c0,20-7.6,22.3-27.7,22.3s-45-2.3-45-22.3
+			C43.5,57.7,59.7,41.5,79.8,41.5C79.8,41.5,79.8,41.5,79.8,41.5z"/>
+		<circle class="st3" cx="96.8" cy="77.8" r="15.6"/>
+		<path class="st4" d="M94.7,33.2c-32.3-5-65.8,10.6-58.7,55.2"/>
+		<circle class="st5" cx="191" cy="207.5" r="10.4"/>
+		<circle class="st5" cx="230.9" cy="207.5" r="10.4"/>
+		<path class="st6" d="M211.1,119.5c-0.7,27.2,5.1,49.9,25.4,62.6"/>
+		<line class="st6" x1="163" y1="192.6" x2="138" y2="222"/>
+		<path class="st7" d="M150.5,244.6c54.5,28.6,63.2,74.1,107.6,73.7c31.7-0.3,61.2-33.9,29.3-52
+			C336.4,200.3,194.6,244.7,150.5,244.6z"/>
+		<line class="st8" x1="264.4" y1="214.9" x2="294.2" y2="236.2"/>
+		<rect y="0" class="st9" width="373.4" height="373.4"/>
+	</g>
+</g>
+</svg>
