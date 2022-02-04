@@ -66,4 +66,4 @@ jobs:
             done
             exit 1
           fi
-          echo "No Errors!
+          echo "No Errors!"
