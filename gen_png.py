@@ -102,8 +102,9 @@ def main():
     args = parser.parse_args()
     
     for res in args.resolution or []:
-        if res > 0 and res < 2147483647:
+        if res <= 0 or res >= 2147483647:
             print("Resolutions have to be in the range of 0 < R > 2147483647!")
+            exit(1)
     sizes = args.resolution
     files = []
 
