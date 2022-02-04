@@ -59,7 +59,7 @@ jobs:
           done
       - name: Post results
         run: |
-          if [[ ${#errArr[@]} != 0 ] ; then
+          if [[ ${#errArr[@]} != 0 ]] ; then
             for errMess in "${errArr[@]}"
             do
               echo $errMess
