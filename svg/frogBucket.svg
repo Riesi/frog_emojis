@@ -1,1 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><defs><style>.cls-1{fill:#77b255;}.cls-2{fill:#c6e5b3;}.cls-3{fill:#5c913b;}.cls-4{fill:#3d6028;}.cls-5{fill:#99aab5;}.cls-6{fill:#292f33;}.cls-7{fill:#fff;}.cls-8{fill:none;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><path class="cls-1" d="M3,9,7.79,32.18S10,35,18,35s10.21-2.82,10.21-2.82L33,9Z"/><path class="cls-2" d="M27.88,32.51C27,33.25,24.31,35,18,35s-9-1.75-9.88-2.49c0,0,3.21-1.89,9.79-1.89S27.88,32.51,27.88,32.51Z"/><path class="cls-3" d="M2,5H34V9H2Z"/><ellipse class="cls-3" cx="18" cy="9.04" rx="16" ry="3.96"/><ellipse class="cls-1" cx="18" cy="5" rx="16" ry="4"/><ellipse class="cls-4" cx="18" cy="4.62" rx="15" ry="3.38"/><path class="cls-5" d="M18,26.41A17.55,17.55,0,0,1,.6,8.75a1,1,0,0,1,2,0A15.55,15.55,0,0,0,18,24.41,15.55,15.55,0,0,0,33.4,8.75a1,1,0,0,1,2,0A17.55,17.55,0,0,1,18,26.41Z"/><path class="cls-6" d="M25.41,23.83C25.41,25.58,22.09,27,18,27s-7.41-1.42-7.41-3.17,2.12,0,7.41,0S25.41,22.07,25.41,23.83Z"/><circle class="cls-3" cx="21.22" cy="28.14" r="0.85"/><circle class="cls-3" cx="14.86" cy="28.14" r="0.85"/><circle class="cls-7" cx="26.39" cy="18.16" r="2.96"/><circle class="cls-6" cx="26.39" cy="18.16" r="1.27"/><circle class="cls-7" cx="9.59" cy="18.16" r="2.96"/><circle class="cls-6" cx="9.59" cy="18.16" r="1.27"/><rect class="cls-8" width="36" height="36"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#77B255;}
+	.st1{fill:#C6E5B3;}
+	.st2{fill:#5C913B;}
+	.st3{fill:#3D6028;}
+	.st4{fill:#99AAB5;}
+	.st5{fill:#292F33;}
+	.st6{fill:#FFFFFF;}
+	.st7{fill:none;}
+</style>
+<g id="Ebene_2_1_">
+	<g id="Ebene_1-2">
+		<path class="st0" d="M3,9l4.8,23.2c0,0,2.2,2.8,10.2,2.8s10.2-2.8,10.2-2.8L33,9H3z"/>
+		<path class="st1" d="M27.9,32.5C27,33.2,24.3,35,18,35s-9-1.8-9.9-2.5c0,0,3.2-1.9,9.8-1.9S27.9,32.5,27.9,32.5z"/>
+		<path class="st2" d="M2,5h32v4H2V5z"/>
+		<ellipse class="st2" cx="18" cy="9" rx="16" ry="4"/>
+		<ellipse class="st0" cx="18" cy="5" rx="16" ry="4"/>
+		<ellipse class="st3" cx="18" cy="4.6" rx="15" ry="3.4"/>
+		<path class="st4" d="M18,26.4c-9.7-0.1-17.5-8-17.4-17.7c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1C2.5,17.3,9.4,24.3,18,24.4
+			c8.6-0.1,15.5-7.1,15.4-15.7c0-0.6,0.4-1,1-1s1,0.4,1,1C35.5,18.4,27.7,26.3,18,26.4z"/>
+		<path class="st5" d="M25.4,23.8c0,1.8-3.3,3.2-7.4,3.2s-7.4-1.4-7.4-3.2s2.1,0,7.4,0S25.4,22.1,25.4,23.8z"/>
+		<circle class="st2" cx="21.2" cy="28.1" r="0.9"/>
+		<circle class="st2" cx="14.9" cy="28.1" r="0.9"/>
+		<circle class="st6" cx="26.4" cy="18.2" r="3"/>
+		<circle class="st5" cx="26.4" cy="18.2" r="1.3"/>
+		<circle class="st6" cx="9.6" cy="18.2" r="3"/>
+		<circle class="st5" cx="9.6" cy="18.2" r="1.3"/>
+		<rect y="0" class="st7" width="36" height="36"/>
+	</g>
+</g>
+</svg>
