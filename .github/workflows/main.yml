@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Test Square SVGs
 
 # Triggers the workflow on push / pull request events but only for the svg folder
@@ -66,7 +64,10 @@ jobs:
           done
           
           # Results
+          # If the error Array is not empty, print everything from it and error out
+          # Otherwise exit normally
           if [[ ${#errArr[@]} != 0 ]] ; then
+            echo "--------------------"
             for errMess in "${errArr[@]}"
             do
               echo $errMess
