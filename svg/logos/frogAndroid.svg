@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356.19 356.19"><defs><style>.cls-1{fill:#77b254;}.cls-2{fill:#fff;}.cls-3{fill:#2a3034;}.cls-4{fill:#5d913b;}.cls-5{fill:none;}</style></defs><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><g id="Ebene_2-2" data-name="Ebene 2"><g id="Ebene_1-2-2" data-name="Ebene 1-2"><rect class="cls-1" x="203.69" y="223.19" width="42.18" height="133" rx="21.09"/><rect class="cls-1" x="109.73" y="223.19" width="42.18" height="133" rx="21.09"/><rect class="cls-1" x="282.91" y="128.69" width="42.18" height="133" rx="21.09"/><rect class="cls-1" x="31.18" y="128.69" width="42.18" height="133" rx="21.09"/><path class="cls-1" d="M85.17,120.45H271a0,0,0,0,1,0,0V252.21a28.24,28.24,0,0,1-28.24,28.24H113.41a28.24,28.24,0,0,1-28.24-28.24V120.45A0,0,0,0,1,85.17,120.45Z"/><path class="cls-1" d="M171.1,23.69h14a84,84,0,0,1,84,84v0a0,0,0,0,1,0,0H87.1a0,0,0,0,1,0,0v0A84,84,0,0,1,171.1,23.69Z"/><circle class="cls-1" cx="126.64" cy="32.09" r="32.09"/><circle class="cls-1" cx="229.42" cy="32.09" r="32.09" transform="translate(145.48 248) rotate(-76.72)"/><circle class="cls-2" cx="123.18" cy="30.15" r="17.82"/><circle class="cls-3" cx="123.18" cy="30.15" r="7.64"/><circle class="cls-2" cx="232.42" cy="30.05" r="17.82"/><circle class="cls-3" cx="232.42" cy="30.05" r="7.64"/><circle class="cls-4" cx="157.5" cy="94.6" r="7.11"/><circle class="cls-4" cx="198.76" cy="94.6" r="7.11"/><rect class="cls-5" width="356.19" height="356.19"/></g></g></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 356.2 356.2" style="enable-background:new 0 0 356.2 356.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#77B254;}
+	.st1{fill:#5D913B;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#2A3034;}
+</style>
+<path class="st0" d="M224.8,223.2L224.8,223.2c11.6,0,21.1,9.4,21.1,21.1v90.8c0,11.6-9.4,21.1-21.1,21.1l0,0
+	c-11.6,0-21.1-9.4-21.1-21.1v-90.8C203.7,232.6,213.1,223.2,224.8,223.2z"/>
+<path class="st0" d="M130.8,223.2L130.8,223.2c11.6,0,21.1,9.4,21.1,21.1v90.8c0,11.6-9.4,21.1-21.1,21.1l0,0
+	c-11.6,0-21.1-9.4-21.1-21.1v-90.8C109.7,232.6,119.2,223.2,130.8,223.2z"/>
+<path class="st0" d="M304,128.7L304,128.7c11.6,0,21.1,9.4,21.1,21.1v90.8c0,11.6-9.4,21.1-21.1,21.1l0,0
+	c-11.6,0-21.1-9.4-21.1-21.1v-90.8C282.9,138.1,292.4,128.7,304,128.7z"/>
+<path class="st0" d="M52.3,128.7L52.3,128.7c11.6,0,21.1,9.4,21.1,21.1v90.8c0,11.6-9.4,21.1-21.1,21.1l0,0
+	c-11.6,0-21.1-9.4-21.1-21.1v-90.8C31.2,138.1,40.6,128.7,52.3,128.7z"/>
+<path class="st0" d="M85.2,120.4H271l0,0v131.8c0,15.6-12.6,28.2-28.2,28.2h0H113.4c-15.6,0-28.2-12.6-28.2-28.2l0,0
+	C85.2,252.2,85.2,120.4,85.2,120.4z"/>
+<g>
+	<path class="st0" d="M171.1,23.7h14c46.4,0,84,37.6,84,84l0,0l0,0l0,0h-182l0,0l0,0C87.1,61.3,124.7,23.7,171.1,23.7L171.1,23.7z"
+		/>
+	<circle class="st1" cx="157.5" cy="94.6" r="7.1"/>
+	<circle class="st1" cx="198.8" cy="94.6" r="7.1"/>
+	<circle class="st0" cx="126.6" cy="32.1" r="32.1"/>
+	<circle class="st2" cx="123.2" cy="30.1" r="17.8"/>
+	<circle class="st3" cx="123.2" cy="30.1" r="7.6"/>
+	
+		<ellipse transform="matrix(0.4472 -0.8944 0.8944 0.4472 98.1254 222.9349)" class="st0" cx="229.4" cy="32.1" rx="32.1" ry="32.1"/>
+	<circle class="st2" cx="232.4" cy="30" r="17.8"/>
+	<circle class="st3" cx="232.4" cy="30" r="7.6"/>
+</g>
+</svg>
