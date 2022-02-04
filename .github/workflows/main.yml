@@ -57,6 +57,7 @@ jobs:
               errArr+=("$f is only one line!")
             fi
           done
+           if [[ ${#errArr[@]} != 0 ]] ; then echo "this should get hit" ; fi
       - name: Post results
         run: |
           if [[ ${#errArr[@]} != 0 ]] ; then
