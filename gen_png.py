@@ -17,11 +17,12 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ###########################################################################
 
+import argparse
 import glob
 import ntpath
+import os
 import subprocess
 import sys
-import os
 # Dependencies: (optional) git, inkscape, python 3.9
 
 
@@ -34,10 +35,9 @@ def delete_graphics(name):
             os.remove(directory)
 
 # rasters SVGs via Inkscape
-def raster_graphics(files):
+def raster_graphics(files, sizes = None):
     """Rasters each file in files via Inkscape"""
-    # TODO: make this adjustable via option/parameter
-    sizes = [72, 512, 1024]
+    sizes = [72, 512, 1024] if sizes is None else sizes
     frogs = len(files)-1
     for file in files:
         name = ntpath.basename(file).replace(".svg", "")
@@ -79,32 +79,32 @@ def create_tag():
     stream = os.popen(f"git tag auto-v{len(tags)}")
     print(stream.read())
 
-# print help message
-def print_help():
-    """Prints gen_png's help output to console"""
-    print("gen_png.py [OPTION]")
-    print("")
-    print("-h, --help                       Shows this help message.")
-    print("-a, --all                        Regenerates all PNGs.")
-    print("-s, --specific [FILENAME]...     " +
-        "Regenerate the PNGs for each FILENAME in the \"svg\" folder. " +
-        "The '.svg' suffix is optional.")
-    print("-g, --git                        " +
-        "Regenerates all PNGs and creates a git commit for them. " +
-        "Requires 'git' to be installed and located in PATH.")
-
 # -------------------------------#
 #           main section
 # -------------------------------#
 def main():
     """Main Method"""
+
+    # parse arguments
+    parser = argparse.ArgumentParser(description='Automate rasterization of SVGs to PNGs.')
+    mutex_group = parser.add_mutually_exclusive_group(required=True)
+    mutex_group.add_argument("-a", "--all", action="store_true", help="Generate PNGs of all SVGs.")
+    mutex_group.add_argument("-s", "--specific", metavar='S', type=str, nargs="+",
+                             help="Generate PNGs for each S in the \"svg\" folder. " +
+                                  "The '.svg' suffix is optional.")
+    parser.add_argument("-r", "--resolution", metavar='R', type=int, nargs="+",
+                        help="Custom resolutions that will be generated instead of the defaults.")
+    mutex_group.add_argument("-g", "--git", action="store_true",
+                             help="Generates PNGs of SVGs that changed since last auto tag and creates a git commit with them. " +
+                                  "Requires 'git' to be installed and located in PATH.")
+    # this will error out on invalid argument configurations
+    args = parser.parse_args()
+
+    sizes = args.resolution # this is None when no argument is supplied
     files = []
-    # if there are no arguments (or help parameter was specified), print help and exit
-    if len(sys.argv) == 1 or sys.argv[1] == '-h' or sys.argv[1] == '--help':
-        print_help()
-        sys.exit(1)
+
     # if "git" parameter was specified, regenerate since last tag + create git commit
-    elif sys.argv[1] == '-g' or sys.argv[1] == '--git':
+    if args.git:
         # get modified, added, renamed, deleted SVGs since last tag
         # call this on windows a) with PS for the $() and b) replace grep with PS' equivalent
         git_command = 'git diff --name-status $(git describe --tags --abbrev=0 --match "auto-v*") HEAD'
@@ -138,21 +138,21 @@ def main():
         delete_graphics(deleted)
         git_add_raster(deleted)
         print('\nAdditions:')
-        raster_graphics(additions)
+        raster_graphics(additions, sizes)
         git_add_raster(additions)
         print('\nModifications:')
-        raster_graphics(modifications)
+        raster_graphics(modifications, sizes)
         git_add_raster(modifications)
 
         # commit and tag
         git_commit_raster()
         create_tag()
     # if "all" parameter was specified, raster all svgs including subfolders
-    elif sys.argv[1] == '-a' or sys.argv[1] == '--all':
+    if args.all:
         files = list(glob.glob('svg/**/*.svg', recursive=True))
-        raster_graphics(files)
+        raster_graphics(files, sizes)
     # if "specific" parameter was specified, only render those
-    elif sys.argv[1] == '-s' or sys.argv[1] == '--specific':
+    if args.specific:
         if len(sys.argv) == 2:
             print("Please specify at least one file!")
             sys.exit(1)
@@ -161,11 +161,7 @@ def main():
             file = file.removeprefix('svg/').removesuffix('.svg')
             if os.path.exists(f"svg/{file}.svg"):
                 files.append(f"svg/{file}.svg")
-        raster_graphics(files)
-    # unknown option
-    else:
-        print("Unknown option!")
-        print("Try 'gen_png.py --help' for more information.")
+        raster_graphics(files, sizes)
 
 if __name__ == "__main__":
     main()
