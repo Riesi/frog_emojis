@@ -101,14 +101,10 @@ def main():
     # this will error out on invalid argument configurations
     args = parser.parse_args()
     
-    sizes = None
     for res in args.resolution or []:
-        print(f"asd{res}")
         if res > 0 and res < 2147483647:
-            if not sizes:
-                sizes = []
-            sizes.append(res)
-
+            print("Resolutions have to be in the range of 0 < R > 2147483647!")
+    sizes = args.resolution
     files = []
 
     # if "git" parameter was specified, regenerate since last tag + create git commit
