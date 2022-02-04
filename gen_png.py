@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 ###########################################################################
-#    Copyright (C) 2022  Stefan Riesenberger
+#    Copyright (C) 2022  Stefan Riesenberger, Miepee, famfo
+#
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -99,8 +100,15 @@ def main():
                                   "Requires 'git' to be installed and located in PATH.")
     # this will error out on invalid argument configurations
     args = parser.parse_args()
+    
+    sizes = None
+    for res in args.resolution or []:
+        print(f"asd{res}")
+        if res > 0 and res < 2147483647:
+            if not sizes:
+                sizes = []
+            sizes.append(res)
 
-    sizes = args.resolution # this is None when no argument is supplied
     files = []
 
     # if "git" parameter was specified, regenerate since last tag + create git commit
