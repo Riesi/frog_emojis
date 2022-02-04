@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install Inkscape
-        run: apt install inkscape
+        run: sudo apt install inkscape
 
       - name: Check Viewbox parameters
         run: |
