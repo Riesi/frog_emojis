@@ -18,9 +18,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Install Inkscape
-        run: sudo apt install inkscape
-
       - name: Check SVG validity
         run: |
           # Enables globstar to recursively go through folders
