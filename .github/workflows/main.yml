@@ -16,7 +16,7 @@ jobs:
           # Enables globstar to recursively go through folders
           shopt -s globstar
           errArr=()
-          for f in ./**/*.svg 
+          for f in ./svg/**/*.svg 
           do
             echo "Checking '$f'"
             
@@ -25,8 +25,10 @@ jobs:
               errArr+=("$f contains a space!")
             fi
             
+            # Save first few lines of file into variable to make parsing faster
+            headfile=$(head -n 50 "$f")
             # Gets everything in between the viewBox quotes
-            vbStr=$(cat $f)
+            vbStr=${headfile}
             vbStr=${vbStr##*viewBox=\"}
             vbStr=${vbStr%%\"*}
 
@@ -49,7 +51,7 @@ jobs:
 
             # Check if normal width/height parameters exist and
             # if yes, compare them with viewBox height/width
-            svgTags=$(cat $f)
+            svgTags=${headfile}
             svgTags=${svgTags##*\<svg}
             svgTags=${svgTags%%\>*}
             
@@ -72,7 +74,7 @@ jobs:
             fi
             
             # Check that svg is not 1 line
-            if [[ $(wc -l < $f) == 0 ]] ; then
+            if [[ $(wc -l < "$f") == 0 ]] ; then
               errArr+=("$f is only one line!")
             fi
           done
