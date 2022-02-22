@@ -14,7 +14,9 @@ CC-BY 4.0: <https://github.com/twitter/twemoji/blob/gh-pages/LICENSE-GRAPHICS>
 When submitting PRs keep the following in mind please:
 
 - only submit SVGs.
-- don't have spaces in your file names. Use snake_case or camelCase instead.
+- use the following naming scheme: verb/adjective+Frog+Object+Differential with camelCase. For example, `sleepyFrogFamilyTkg` for an emoji with a sleepy frog family, which is differentiated from a sleepy frog family, by including Tkg.
+  - should you submit an emoji that has a clear emoji mapping to it, please prefix it with `U[unicodeChracter]-`. For example, `U1f35e-frogBread`.
+  - should you be on Windows and case sensitivity seems to commit wrong, run the following command in the git repo: `git config core.ignorecase false`
 - only submit SVGs with the file ending `.svg`. Not `.SVG` or `.sVg`
 
 ## Generating PNGs 
