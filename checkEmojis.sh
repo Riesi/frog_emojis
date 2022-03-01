@@ -69,8 +69,8 @@ done
 # Results
 # If the error Array is not empty, print everything from it and error out
 # Otherwise exit normally
+echo "--------------------"
 if [[ ${#errArr[@]} != 0 ]] ; then
-  echo "--------------------"
   for errMess in "${errArr[@]}"
   do
     echo $errMess
