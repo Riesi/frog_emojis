@@ -174,11 +174,7 @@ def main():
         raster_graphics(files, sizes)
     # if "specific" parameter was specified, only render those
     if args.specific:
-        if len(sys.argv) == 2:
-            print("Please specify at least one file!")
-            sys.exit(1)
-
-        for file in sys.argv:
+        for file in args.specific:
             file = file.removeprefix('svg/').removesuffix('.svg')
             if os.path.exists(f"svg/{file}.svg"):
                 files.append(f"svg/{file}.svg")
