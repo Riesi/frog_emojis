@@ -1,10 +1,10 @@
-Most of theses frogs are based on the SVGs of the twitter emoji set (https://twemoji.twitter.com). Others are unique designs with other inspirations in mind.
+Most of theses frogs are based on the SVGs of the Twitter emoji set (https://twemoji.twitter.com). Others are unique designs with other inspirations in mind.
 
 Have fun using them! 🐸
 
 ## License
 
-By contributing you agree to license your contribution under the terms of the GPLv3 (for code) and CC-BY 4.0 (for graphics) licenses. The corresponding license can be found in the LICENCE and LICENSE-GRAPHICS file respectively. The following links also reference to the licenses:
+By contributing you agree to license your contribution under the terms of the GPLv3 (for code) and CC-BY 4.0 (for graphics) licenses. The corresponding license can be found in the LICENCE-CODE and LICENSE-GRAPHICS file respectively. The following links also reference the licenses:
 
 GPLv3: <http://www.gnu.org/licenses/gpl-3.0.txt>
 
@@ -13,14 +13,21 @@ CC-BY 4.0: <https://github.com/twitter/twemoji/blob/gh-pages/LICENSE-GRAPHICS>
 ## Contributing
 When submitting PRs keep the following in mind please:
 
-- only submit SVGs.
+- only submit SVGs. PNGs will be automatically generated after a merged PR.
 - use the following naming scheme: verb/adjective+Frog+Object+Differential with camelCase. For example, `sleepyFrogFamilyTkg` for an emoji with a sleepy frog family, which is differentiated from a sleepy frog family, by including Tkg.
   - should you submit an emoji that has a clear emoji mapping to it, please prefix it with `U[unicodeChracter]-`. For example, `U1f35e-frogBread`.
   - should you be on Windows and case sensitivity seems to commit wrong, run the following command in the git repo: `git config core.ignorecase false`
 - only submit SVGs with the file ending `.svg`. Not `.SVG` or `.sVg`
 
+In addition to the following guidelines for the SVG's:
+- file name should contain spaces
+- the SVG should be a square
+- the SVG should not be all on one line.
+
+If you have Bash and Unix core utilities installed, you can execute the `checkEmojis.sh` script to locally check if your SVGs fulfill the requirements.
+
 ## Generating PNGs 
-If you want to generate PNGs from the SVGs, you can use the `gen_png.py` script.
+If you want to locally generate PNGs from the SVGs, you can use the `gen_png.py` script.
 
 ### Dependencies
 - Python 3.9 - To run the script.
