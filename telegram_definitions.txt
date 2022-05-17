@@ -84,6 +84,7 @@ scaryfrog.png|👻
 spyfrog.png|🕵️
 super_frog.png|🚀🌠
 sweatingfrog.png|😅😰
+frogTear.png|😵
 texasfrog.png|🤠
 thumbsupfrog.png|👍
 tkgfrog.png|😎
