@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <style>
+        .frog-holder {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            width: 256px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">frog_emojis</h1>
+      <h2 class="project-tagline">Froggyfied custom emojies and logos</h2>
+      
+        <a href="https://github.com/Riesi/frog_emojis" class="btn">View on GitHub</a>
+      
+    </header>
+    <div class="frog-holder"> <!-- It's like the hand holder but with frogs -->
+
+    </div>
+    <script type="module">
+        let cacheInvalidationPeriod = 1000 * 60; // 1 minute should be fine for github api ratelimiting
+        function frogCache_check() {
+            if (!window.localStorage) { // Some might have it disabled for privacy reasons
+                return false;
+            }
+
+            if (window.localStorage.getItem("frogCache_lastCheck") === null) {
+                return false;
+            }
+
+            let lastCheck = parseInt(window.localStorage.getItem("frogCache_lastCheck"));
+            let now = Date.now();
+
+            if (now - lastCheck > cacheInvalidationPeriod) {
+                return false;
+            }
+
+            return true;
+        }
+        function frogCache_commit(frogs) {
+            if (!window.localStorage) {
+                return false;
+            }
+
+            window.localStorage.setItem("frogCache_lastCheck", Date.now().toString());
+            window.localStorage.setItem("frogCache_frogs", JSON.stringify(frogs));
+
+            return true;
+        }
+        async function loadFrogs() {
+            let frogs;
+            if (!frogCache_check()) {
+                console.log("Re-fetching frogs");
+                frogs = await fetch("https://api.github.com/repos/Riesi/frog_emojis/git/trees/master?recursive=1")
+                    .then(res=>res.json())
+                    .then(a => a.tree.filter(b => b.path.startsWith("png/1024")));
+                    //.then(a => a.filter(b => b.type === "blob"));
+                
+                frogCache_commit(frogs);
+            } else {
+                console.log("Using old frogs");
+                frogs = JSON.parse(window.localStorage.getItem("frogCache_frogs"));
+            }
+        
+            return frogs;
+        }
+
+        loadFrogs().then(a => {
+            let frogs = a.filter(b => b.type === "blob"); // get pngs
+            let folders = a.filter(b => b.type === "tree") // get folders
+            let froglinks = frogs.map(frogs => `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frogs.path}`);
+            //console.log(froglinks);
+            console.log(folders);
+            folders.map(folder => {
+                console.log(folder);
+                //console.log(frogs);
+
+                let section = document.createElement("h1");
+                section.textContent = folder.path.replace("png/1024/","")+":";
+                    
+                document.querySelector(".frog-holder").appendChild(section);
+
+                let folderfrog = frogs.filter(folderfrog => folderfrog.path.startsWith(folder.path));
+                let folderfroglink = folderfrog.map(frog => `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`);
+                //console.log(folderfroglink);
+                folderfroglink.map(link => {
+                    let image = document.createElement("img");
+                    image.src = link;
+                    image.style = "width:64px;"
+                    document.querySelector(".frog-holder").appendChild(image);
+                })
+                document.querySelector(".frog-holder").appendChild(document.createElement("br"));
+            })
+
+        })
+    </script>
+    
+    <footer class="site-footer">
+          <span class="site-footer-owner"><a href="https://github.com/Riesi/frog_emojis">frog_emojis</a> is maintained by <a href="https://github.com/Riesi">Riesi</a> and <a href="https://github.com/Miepee">Miepee</a>. JavaScript by <a href="https://github.com/rphsoftware">Rph</a></span>
+      </footer>
+</body>
+</html>
