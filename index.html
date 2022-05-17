@@ -68,7 +68,7 @@
                 console.log("Re-fetching frogs");
                 frogs = await fetch("https://api.github.com/repos/Riesi/frog_emojis/git/trees/master?recursive=1")
                     .then(res=>res.json())
-                    .then(a => a.tree.filter(b => b.path.startsWith("png/1024")));
+                    .then(a => a.tree.filter(b => b.path.startsWith("svg/")));
                     //.then(a => a.filter(b => b.type === "blob"));
                 
                 frogCache_commit(frogs);
