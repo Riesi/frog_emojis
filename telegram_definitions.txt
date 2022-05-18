@@ -18,8 +18,8 @@ U1f360-frogSweetPotato.png|🥔
 U1f64f-prayingFrog.png|🙏
 U1f937-shruggingFrog.png|🤷
 U1f634-sleepyFrog.png|😴
-U26c4-frogSnowman.png|☃️
-U2603-frogSnowmanWithoutSnow.png|⛄
+U2603-frogSnowman.png|☃️
+U26c4-frogSnowmanWithoutSnow.png|⛄
 U1f3af-frogStar.png|⭐
 U1f31e-frogSun.png|☀️
 U1f914-thinkingFrog.png|🤔
