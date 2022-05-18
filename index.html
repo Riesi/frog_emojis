@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>frog_emojis</title>
+    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/Riesi/frog_emojis/master/svg/U1f438-frog.svg" sizes="any">
+    <link rel="icon" href="https://raw.githubusercontent.com/Riesi/frog_emojis/master/png/72/U1f438-frog.png" type="image/png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,12 +95,16 @@
         }
         function mapFrogToImage(frogs, idstr) {
             let folderfroglink = frogs.map(frog => {
+                let linkimage = document.createElement("a");
+                linkimage.href = `https://github.com/Riesi/frog_emojis/blob/master/${frog.path}`;
+                linkimage.target="_blank";
                 let link = `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`
                 let image = document.createElement("img");
                 image.src = link;
                 image.title = frog.path.replaceAll("/","").replace(idstr,"").replace(".svg","").replaceAll("svg","");
                 image.style = "width:64px;margin:6px;"
-                document.querySelector("#" + idstr).appendChild(image);
+                linkimage.appendChild(image);
+                document.querySelector("#" + idstr).appendChild(linkimage);
             });
             
             document.querySelector("#mainholder").appendChild(document.createElement("br"));
