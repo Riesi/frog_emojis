@@ -28,7 +28,7 @@
         <a href="https://github.com/Riesi/frog_emojis" class="btn">View on GitHub</a>
       
     </header>
-    <div id="mainholder"> <!-- It's like the hand holder but with frogs -->
+    <div id="mainholder" style="text-align:center"> <!-- It's like the hand holder but with frogs -->
 
     </div>
     <script type="module">
@@ -80,7 +80,7 @@
         }
         function mapFolderToDiv(folderPath) {
             let divv = document.createElement("div");
-                let idstr = folderPath.replace('/','');
+                let idstr = folderPath.replaceAll('/','');
                 divv.id = idstr;
                 divv.class = "frog-holder";
                 document.querySelector("#mainholder").appendChild(divv);
@@ -91,13 +91,15 @@
             return idstr;
         }
         function mapFrogToImage(frogs, idstr) {
-            let folderfroglink = frogs.map(frog => `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`);
-            folderfroglink.map(link => {
+            let folderfroglink = frogs.map(frog => {
+                let link = `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`
                 let image = document.createElement("img");
                 image.src = link;
-                image.style = "width:64px;"
+                image.title = frog.path.replaceAll("/","").replace(idstr,"").replace(".svg","");
+                image.style = "width:64px;margin:6px;"
                 document.querySelector("#" + idstr).appendChild(image);
-            })
+            });
+            
             document.querySelector("#mainholder").appendChild(document.createElement("br"));
         }
         
