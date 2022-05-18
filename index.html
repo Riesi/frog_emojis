@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
@@ -21,7 +20,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color:#292929;">
     <header class="page-header" role="banner">
       <h1 class="project-name">frog_emojis</h1>
       <h2 class="project-tagline">Froggyfied custom emojies and logos</h2>
@@ -29,7 +28,7 @@
         <a href="https://github.com/Riesi/frog_emojis" class="btn">View on GitHub</a>
       
     </header>
-    <div class="frog-holder"> <!-- It's like the hand holder but with frogs -->
+    <div id="mainholder"> <!-- It's like the hand holder but with frogs -->
 
     </div>
     <script type="module">
@@ -67,7 +66,7 @@
             if (!frogCache_check()) {
                 console.log("Re-fetching frogs");
                 frogs = await fetch("https://api.github.com/repos/Riesi/frog_emojis/git/trees/master?recursive=1")
-                    .then(res=>res.json())
+                    .then(res => res.json())
                     .then(a => a.tree.filter(b => b.path.startsWith("svg/")));
                     //.then(a => a.filter(b => b.type === "blob"));
                 
@@ -79,39 +78,52 @@
         
             return frogs;
         }
-
+        function mapFolderToDiv(folderPath) {
+            let divv = document.createElement("div");
+                let idstr = folderPath.replace('/','');
+                divv.id = idstr;
+                divv.class = "frog-holder";
+                document.querySelector("#mainholder").appendChild(divv);
+                let section = document.createElement("h1");
+                section.textContent = folderPath.replace("svg/","")+":";
+                    
+                document.querySelector("#" + idstr).appendChild(section);
+            return idstr;
+        }
+        function mapFrogToImage(frogs, idstr) {
+            let folderfroglink = frogs.map(frog => `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`);
+            folderfroglink.map(link => {
+                let image = document.createElement("img");
+                image.src = link;
+                image.style = "width:64px;"
+                document.querySelector("#" + idstr).appendChild(image);
+            })
+            document.querySelector("#mainholder").appendChild(document.createElement("br"));
+        }
+        
         loadFrogs().then(a => {
+            
+            console.log(a);
             let frogs = a.filter(b => b.type === "blob"); // get pngs
             let folders = a.filter(b => b.type === "tree") // get folders
-            let froglinks = frogs.map(frogs => `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frogs.path}`);
-            //console.log(froglinks);
+
             console.log(folders);
             folders.map(folder => {
                 console.log(folder);
-                //console.log(frogs);
+                
+                
 
-                let section = document.createElement("h1");
-                section.textContent = folder.path.replace("svg/","")+":";
-                    
-                document.querySelector(".frog-holder").appendChild(section);
-
-                let folderfrog = frogs.filter(folderfrog => folderfrog.path.startsWith(folder.path));
-                let folderfroglink = folderfrog.map(frog => `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`);
-                //console.log(folderfroglink);
-                folderfroglink.map(link => {
-                    let image = document.createElement("img");
-                    image.src = link;
-                    image.style = "width:64px;"
-                    document.querySelector(".frog-holder").appendChild(image);
-                })
-                document.querySelector(".frog-holder").appendChild(document.createElement("br"));
+                let folderfrog = frogs.filter(folderfrog => folderfrog.path.startsWith(folder.path)); // get subfolder frogs
+                frogs = frogs.filter( ( frog ) => !folderfrog.includes( frog ) ); // remove subfolder frogs from list
+                console.log(frogs);
+                mapFrogToImage(folderfrog, mapFolderToDiv(folder.path));
             })
-
+            mapFrogToImage(frogs, mapFolderToDiv("root"));
         })
     </script>
     
     <footer class="site-footer">
-          <span class="site-footer-owner"><a href="https://github.com/Riesi/frog_emojis">frog_emojis</a> is maintained by <a href="https://github.com/Riesi">Riesi</a> and <a href="https://github.com/Miepee">Miepee</a>. JavaScript by <a href="https://github.com/rphsoftware">Rph</a></span>
-      </footer>
+          <span class="site-footer-owner"><a href="https://github.com/Riesi/frog_emojis">frog_emojis</a> is maintained by <a href="https://github.com/Riesi">Riesi</a> and <a href="https://github.com/Miepee">Miepee</a>. JavaScript base by <a href="https://github.com/rphsoftware">Rph</a></span>
+    </footer>
 </body>
 </html>
