@@ -95,7 +95,7 @@
                 let link = `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`
                 let image = document.createElement("img");
                 image.src = link;
-                image.title = frog.path.replaceAll("/","").replace(idstr,"").replace(".svg","");
+                image.title = frog.path.replaceAll("/","").replace(idstr,"").replace(".svg","").replaceAll("svg","");
                 image.style = "width:64px;margin:6px;"
                 document.querySelector("#" + idstr).appendChild(image);
             });
@@ -105,19 +105,17 @@
         
         loadFrogs().then(a => {
             
-            console.log(a);
+            //console.log(a);
             let frogs = a.filter(b => b.type === "blob"); // get pngs
             let folders = a.filter(b => b.type === "tree") // get folders
 
-            console.log(folders);
+            //console.log(folders);
             folders.map(folder => {
-                console.log(folder);
+                //console.log(folder);
                 
-                
-
                 let folderfrog = frogs.filter(folderfrog => folderfrog.path.startsWith(folder.path)); // get subfolder frogs
                 frogs = frogs.filter( ( frog ) => !folderfrog.includes( frog ) ); // remove subfolder frogs from list
-                console.log(frogs);
+                //console.log(frogs);
                 mapFrogToImage(folderfrog, mapFolderToDiv(folder.path));
             })
             mapFrogToImage(frogs, mapFolderToDiv("root"));
