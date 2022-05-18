@@ -18,8 +18,9 @@
             justify-content: center;
         }
         img {
-            width: 256px;
+            width: 64px;
             height: auto;
+            margin: 6px;
         }
     </style>
 </head>
@@ -89,7 +90,6 @@
                 document.querySelector("#mainholder").appendChild(divv);
                 let section = document.createElement("h1");
                 section.textContent = folderPath.replace("svg/","")+":";
-                    
                 document.querySelector("#" + idstr).appendChild(section);
             return idstr;
         }
@@ -97,12 +97,10 @@
             let folderfroglink = frogs.map(frog => {
                 let linkimage = document.createElement("a");
                 linkimage.href = `https://github.com/Riesi/frog_emojis/blob/master/${frog.path}`;
-                linkimage.target="_blank";
                 let link = `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`
                 let image = document.createElement("img");
                 image.src = link;
                 image.title = frog.path.replaceAll("/","").replace(idstr,"").replace(".svg","").replaceAll("svg","");
-                image.style = "width:64px;margin:6px;"
                 linkimage.appendChild(image);
                 document.querySelector("#" + idstr).appendChild(linkimage);
             });
@@ -119,7 +117,6 @@
             //console.log(folders);
             folders.map(folder => {
                 //console.log(folder);
-                
                 let folderfrog = frogs.filter(folderfrog => folderfrog.path.startsWith(folder.path)); // get subfolder frogs
                 frogs = frogs.filter( ( frog ) => !folderfrog.includes( frog ) ); // remove subfolder frogs from list
                 //console.log(frogs);
@@ -130,7 +127,7 @@
     </script>
     
     <footer class="site-footer">
-          <span class="site-footer-owner"><a href="https://github.com/Riesi/frog_emojis">frog_emojis</a> is maintained by <a href="https://github.com/Riesi">Riesi</a> and <a href="https://github.com/Miepee">Miepee</a>. JavaScript base by <a href="https://github.com/rphsoftware">Rph</a></span>
+          <span class="site-footer-owner"><a href="https://github.com/Riesi/frog_emojis">frog_emojis</a> is maintained by <a href="https://github.com/Riesi">Riesi</a> and <a href="https://github.com/Miepee">Miepee</a>. JavaScript base by <a href="https://github.com/rphsoftware">Rph</a>.</span>
     </footer>
 </body>
 </html>
