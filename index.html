@@ -87,7 +87,8 @@
                 let idstr = folderPath.replaceAll('/','');
                 divv.id = idstr;
                 divv.class = "frog-holder";
-                document.querySelector("#mainholder").appendChild(divv);
+                let mh = document.querySelector("#mainholder");
+                mh.insertBefore(divv, mh.firstChild);
                 let section = document.createElement("h1");
                 section.textContent = folderPath.replace("svg/","")+":";
                 document.querySelector("#" + idstr).appendChild(section);
