@@ -35,15 +35,15 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:object-paths="true"
      inkscape:snap-bbox="true"
-     inkscape:zoom="8"
-     inkscape:cx="476.8125"
-     inkscape:cy="526.1875"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="665.38748"
+     inkscape:cy="796.90934"
      inkscape:window-width="1920"
      inkscape:window-height="1026"
      inkscape:window-x="1920"
      inkscape:window-y="54"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1279"
+     inkscape:current-layer="layer1"
      inkscape:snap-object-midpoints="true"
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
@@ -232,18 +232,6 @@
          mask="none"
          style="display:inline;fill:#73b618;stroke-width:0.00026453;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
          d="M 144.76732 79.731866 C 144.75911 79.731855 144.7509 79.731898 144.74269 79.732002 L 144.74271 79.732022 C 144.13012 79.739822 143.55342 80.045835 143.20364 80.562089 C 142.80391 81.152103 142.76967 81.9176 143.11573 82.540609 L 144.07633 82.106745 C 143.9622 81.910543 143.93118 81.667752 143.99225 81.449145 C 144.05335 81.230537 144.20573 81.039004 144.40503 80.930375 C 144.62298 80.811577 144.89386 80.794775 145.12483 80.885706 C 145.3558 80.976636 145.54253 81.173603 145.62099 81.409103 L 146.54934 80.989823 C 146.31093 80.318208 145.71329 79.838039 145.00637 79.74764 C 144.92626 79.7374 144.84667 79.731967 144.76732 79.731866 z " />
-      <g
-         id="g2134"
-         style="display:inline;opacity:1;stroke-width:0.00999801">
-        <circle
-           style="display:none;fill:#000000;fill-opacity:0.999954;stroke:none;stroke-width:0.00026453;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
-           id="circle2130"
-           cx="144.76755"
-           cy="81.622482"
-           r="0.85086179" />
-        <g
-           id="path2132" />
-      </g>
       <circle
          style="fill:#73b618;fill-opacity:1;stroke:none;stroke-width:0.00026453;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
          id="path20531"
@@ -252,21 +240,6 @@
          r="0.53043991"
          mask="none"
          inkscape:label="pupil" />
-      <g
-         id="g7067"
-         style="display:none;opacity:1;stroke-width:0.00999801">
-        <circle
-           style="display:inline;fill:#000000;fill-opacity:0.999954;stroke:none;stroke-width:0.00026453;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
-           id="circle7063"
-           cx="144.76755"
-           cy="81.622482"
-           r="0.85086179" />
-        <path
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264515;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-           d="m 144.45895,83.115097 c 0.12129,-0.630991 -0.20733,-0.756213 -0.33913,-1.220015 l 1.31213,-0.548646 c 0.0164,0.02693 0.22036,0.511817 0.89027,0.813979 z"
-           id="path7065"
-           sodipodi:nodetypes="ccccc" />
-      </g>
     </g>
   </g>
 </svg>
