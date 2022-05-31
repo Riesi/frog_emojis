@@ -79,13 +79,10 @@ U265f-frogPawn.png
 U26c4-frogSnowmanWithoutSnow.png
 other/riesiFrog.png|😠
 other/frog2b.png|🤖
-other/frogBeerCan.png|🍻🍺
 other/frogBeer.png|🍻🍺
 other/frogCat.png|🐱
-other/frogCoins.png|💰
 other/frogDonut.png|🍩
 other/frogFamilyTkg.png|👪
-other/frogFlash.png|⚡
 other/joyfulFrog.png|🤣😂
 other/frogKaiser.png|👑
 other/scaredFrog.png|😵
@@ -108,7 +105,6 @@ other/frogJester.png|🃏
 other/frogTestPattern.png|📺
 other/frogMissingTexture.png|📓
 other/frogOk.png|👌
-other/frogPenguin.png|🐧
 other/pinkFrog.png|🐸
 other/plagfrog.png|🐸
 other/pointyFrog.png|☝️
@@ -126,5 +122,3 @@ logos/frogUbuntu.png|💿
 logos/frogMicrosoft.png|🖥️
 logos/frogNvidia.png|🖥️🎮
 FrogOS_assets/frogDetective.png|🔍
-FrogOS_assets/frogMouse.png|🖦
-FrogOS_assets/pointyFrogMouse.png|☝️
