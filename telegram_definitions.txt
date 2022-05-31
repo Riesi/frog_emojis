@@ -86,16 +86,12 @@ other/frogFamilyTkg.png|👪
 other/joyfulFrog.png|🤣😂
 other/frogKaiser.png|👑
 other/scaredFrog.png|😵
-other/frogMusic.png|🎧
-other/frogPalm.png|🤦
 other/frogPopcorn.png|🍿
 other/frogPyramid.png|🔺
-other/eatenFrog.png|☠️
 other/frogSoviet.png|🇷🇺
 other/frogBatsignal.png|🌃
 other/frogs.png|🐸
 other/frogStalker.png|🕵️
-other/frogUwu.png|😳
 other/frogWhip.png|🐸
 other/frogWhisky.png|🥃
 other/frogHipster.png|🤓
