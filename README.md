@@ -1,4 +1,4 @@
-Most of theses frogs are based on the SVGs of the Twitter emoji set (https://twemoji.twitter.com). Others are unique designs with other inspirations in mind.
+Most of theses frogs are based on the SVGs of [Twemoji](https://twemoji.twitter.com) by Twitter, Inc and other contributors ([CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)). Others are unique designs with other inspirations in mind.
 
 Have fun using them! 🐸
 
