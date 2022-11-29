@@ -32,6 +32,7 @@ import sys
 def delete_graphics(name):
     """Delete each PNG file in name"""
     for file in name:
+        file = file.removeprefix('svg/').removesuffix('.svg')
         for directory in glob.glob(f"./png/**/{file}.png", recursive=True):
             print(f"deleting: {directory}")
             os.remove(directory)
@@ -73,7 +74,7 @@ def git_commit_raster():
     stream = os.popen('git commit -m "[png] generate PNGs"')
     print_pipe(stream.read())
 
-# create a new tag
+# create a new tag with a description containing the added, modified, deleted and renamed files
 def create_tag(added, modified, deleted, renamed_old, renamed_new):
     """Creates a new git tag and names it appropriately"""
     # get tags
@@ -157,20 +158,21 @@ def main():
             elif 'M' == split_file[0]:
                 modifications.append(split_file[1])
             elif 'D' == split_file[0]:
-                deleted.append(split_file[1].removeprefix('svg/').removesuffix('.svg'))
+                deleted.append(split_file[1])
             elif re.match(r"R[0-9]+", split_file[0]):
-                renamed_old.append(split_file[1].removeprefix('svg/').removesuffix('.svg'))
+                renamed_old.append(split_file[1])
                 renamed_new.append(split_file[2])
             else:
                 print(f'Unrecognized git action: {split_file}')
                 sys.exit(1)
 
-#        print('A:' + str(additions))
-#        print('M:' + str(modifications))
-#        print('D:' + str(deleted))
-#        print(renamed_old)
-#        print(renamed_new)
 
+        print('\nAdditions:')
+        raster_graphics(additions, sizes)
+        git_add_raster(additions)
+        print('\nModifications:')
+        raster_graphics(modifications, sizes)
+        git_add_raster(modifications)
         print('\nRenamed:')
         delete_graphics(renamed_old)
         raster_graphics(renamed_new)
@@ -179,13 +181,7 @@ def main():
         print('\nDeletions:')
         delete_graphics(deleted)
         git_add_raster(deleted)
-        print('\nAdditions:')
-        raster_graphics(additions, sizes)
-        git_add_raster(additions)
-        print('\nModifications:')
-        raster_graphics(modifications, sizes)
-        git_add_raster(modifications)
-
+        
         # commit and tag
         git_commit_raster()
         create_tag(additions, modifications, deleted, renamed_old, renamed_new)
