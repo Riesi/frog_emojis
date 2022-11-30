@@ -77,6 +77,8 @@ def git_commit_raster():
 # create a new tag with a description containing the added, modified, deleted and renamed files
 def create_tag(added, modified, deleted, renamed_old, renamed_new):
     """Creates a new git tag and names it appropriately"""
+    if len(renamed_old) != len(renamed_new):
+        raise Exception("Mismatch of renamed_old/renamed_new length!")
     # get tags
     stream = os.popen('git tag -l "auto-v*"')
     output = stream.read()
