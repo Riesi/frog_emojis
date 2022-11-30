@@ -32,6 +32,7 @@ import sys
 def delete_graphics(name):
     """Delete each PNG file in name"""
     for file in name:
+        file = file.removeprefix('svg/').removesuffix('.svg')
         for directory in glob.glob(f"./png/**/{file}.png", recursive=True):
             print(f"deleting: {directory}")
             os.remove(directory)
@@ -73,16 +74,31 @@ def git_commit_raster():
     stream = os.popen('git commit -m "[png] generate PNGs"')
     print_pipe(stream.read())
 
-# create a new tag
-def create_tag():
+# create a new tag with a description containing the added, modified, deleted and renamed files
+def create_tag(added, modified, deleted, renamed_old, renamed_new):
     """Creates a new git tag and names it appropriately"""
+    if len(renamed_old) != len(renamed_new):
+        raise Exception("Mismatch of renamed_old/renamed_new length!")
     # get tags
     stream = os.popen('git tag -l "auto-v*"')
     output = stream.read()
     tags = output.split('\n')
     tags.remove('')
+    # create tag message
+    added = '\n'.join([x.removeprefix('svg/').removesuffix('.svg') for x in added])
+    modified = '\n'.join([x.removeprefix('svg/').removesuffix('.svg') for x in modified])
+    deleted = '\n'.join([x.removeprefix('svg/').removesuffix('.svg') for x in deleted])
+    
+    i = 0
+    renamed = ''
+    while i < len(renamed_old):
+        old = renamed_old[i].removeprefix('svg/').removesuffix('.svg')
+        new = renamed_new[i].removeprefix('svg/').removesuffix('.svg')
+        renamed = f'{renamed}\n{old} -> {new}'
+        i+=1
+    message = f'**New:**\n{added}\n\n**Updated:**\n{modified}\n\n**Renamed:**{renamed}\n\n**Removed:**\n{deleted}'
     # create new tag
-    stream = os.popen(f"git tag auto-v{len(tags)}")
+    stream = os.popen(f"git tag auto-v{len(tags)} -m '{message}'")
     print_pipe(stream.read())
 
 # -------------------------------#
@@ -135,7 +151,8 @@ def main():
         additions = list()
         modifications = list()
         deleted = list()
-        renamed = list()
+        renamed_old = list()
+        renamed_new = list()
         for s in reversed(files):
             split_file = s.split('\t')
             if 'A' == split_file[0]:
@@ -143,31 +160,33 @@ def main():
             elif 'M' == split_file[0]:
                 modifications.append(split_file[1])
             elif 'D' == split_file[0]:
-                deleted.append(split_file[1].removeprefix('svg/').removesuffix('.svg'))
+                deleted.append(split_file[1])
             elif re.match(r"R[0-9]+", split_file[0]):
-                deleted.append(split_file[1].removeprefix('svg/').removesuffix('.svg'))
-                modifications.append(split_file[2])
+                renamed_old.append(split_file[1])
+                renamed_new.append(split_file[2])
             else:
                 print(f'Unrecognized git action: {split_file}')
                 sys.exit(1)
 
-#        print('A:' + str(additions))
-#        print('M:' + str(modifications))
-#        print('D:' + str(deleted))
-#        print('R[0-9]+:' + str(renamed))
 
-        delete_graphics(deleted)
-        git_add_raster(deleted)
         print('\nAdditions:')
         raster_graphics(additions, sizes)
         git_add_raster(additions)
         print('\nModifications:')
         raster_graphics(modifications, sizes)
         git_add_raster(modifications)
-
+        print('\nRenamed:')
+        delete_graphics(renamed_old)
+        raster_graphics(renamed_new)
+        git_add_raster(renamed_old)
+        git_add_raster(renamed_new)
+        print('\nDeletions:')
+        delete_graphics(deleted)
+        git_add_raster(deleted)
+        
         # commit and tag
         git_commit_raster()
-        create_tag()
+        create_tag(additions, modifications, deleted, renamed_old, renamed_new)
     # if "all" parameter was specified, raster all svgs including subfolders
     if args.all:
         files = list(glob.glob('svg/**/*.svg', recursive=True))
