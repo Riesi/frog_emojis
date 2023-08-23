@@ -31,18 +31,38 @@
     </style>
 </head>
 <body style="background-color:#292929;">
+    <script>
+        function set_all_format(){
+            let obj = document.getElementById("fileformat");
+            const frogs = document.getElementsByClassName("frog");
+            for (let i = 0; i < frogs.length; i++) {
+                let frog = frogs[i];
+                let val = frog.getAttribute("value");
+                let url = `https://github.com/Riesi/frog_emojis/blob/master/${obj.value}/${val}`;
+                if (obj.value !== 'svg') url = url.replace(/svg$/,'png');
+                frog.href = url;
+            }
+        }
+    </script>
     <header class="page-header" role="banner">
       <h1 class="project-name">frog_emojis</h1>
       <h2 class="project-tagline">Froggyfied custom emojies and logos</h2>
       
         <a href="https://github.com/Riesi/frog_emojis" class="btn">View on GitHub</a>
-      
+    <br/>
+    <select class="frog-select" name="formatselection" id="fileformat" onchange="set_all_format()">
+        <option value="svg">SVG</option>
+        <option value="png/72">72px PNG</option>
+        <option value="png/512">512px PNG</option>
+        <option value="png/1024">1024px PNG</option>
+    </select>
     </header>
     <div id="mainholder" style="text-align:center"> <!-- It's like the hand holder but with frogs -->
 
     </div>
     <script type="module">
         let cacheInvalidationPeriod = 1000 * 60; // 1 minute should be fine for github api ratelimiting
+        
         function frogCache_check() {
             if (!window.localStorage) { // Some might have it disabled for privacy reasons
                 return false;
@@ -100,14 +120,18 @@
                 document.querySelector("#" + idstr).appendChild(section);
             return idstr;
         }
+        
         function mapFrogToImage(frogs, idstr) {
             let folderfroglink = frogs.map(frog => {
                 let linkimage = document.createElement("a");
                 linkimage.href = `https://github.com/Riesi/frog_emojis/blob/master/${frog.path}`;
+                linkimage.setAttribute('class',"frog");
+                linkimage.setAttribute('value',`${frog.path.replace(/^svg\//, '')}`);
                 let link = `https://raw.githubusercontent.com/Riesi/frog_emojis/master/${frog.path}`
                 let image = document.createElement("img");
                 image.src = link;
                 image.title = frog.path.replaceAll("/","").replace(idstr,"").replace(".svg","").replaceAll("svg","");
+            
                 linkimage.appendChild(image);
                 document.querySelector("#" + idstr).appendChild(linkimage);
             });
@@ -130,7 +154,9 @@
                 mapFrogToImage(folderfrog, mapFolderToDiv(folder.path));
             })
             mapFrogToImage(frogs, mapFolderToDiv("root"));
-        })
+            set_all_format();
+        });
+
     </script>
     
     <footer class="site-footer">
