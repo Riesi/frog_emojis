@@ -32,15 +32,35 @@
 </head>
 <body style="background-color:#292929;">
     <script>
+        let frogs = null;
         function set_all_format(){
             let obj = document.getElementById("fileformat");
-            const frogs = document.getElementsByClassName("frog");
+            
+            if (frogs == null){
+                frogs = document.getElementsByClassName("frog");
+            }
             for (let i = 0; i < frogs.length; i++) {
                 let frog = frogs[i];
                 let val = frog.getAttribute("value");
                 let url = `https://github.com/Riesi/frog_emojis/blob/master/${obj.value}/${val}`;
                 if (obj.value !== 'svg') url = url.replace(/svg$/,'png');
                 frog.href = url;
+            }
+        }
+        
+        function search_frogs(searchObj){
+            if (frogs == null){
+                frogs = document.getElementsByClassName("frog");
+            }
+            let search_val = searchObj.value;
+            for (let i = 0; i < frogs.length; i++) {
+                let frog = frogs[i];
+                let val = frog.firstChild.getAttribute("title");
+                if (val.search(new RegExp(search_val+"", "i")) != -1) {
+                    frog.removeAttribute("hidden");
+                }else{
+                    frog.setAttribute("hidden","");
+                }
             }
         }
     </script>
@@ -56,6 +76,7 @@
         <option value="png/512">512px PNG</option>
         <option value="png/1024">1024px PNG</option>
     </select>
+    <input type="text" oninput="search_frogs(this)" placeholder="Search for frogs...">
     </header>
     <div id="mainholder" style="text-align:center"> <!-- It's like the hand holder but with frogs -->
 
