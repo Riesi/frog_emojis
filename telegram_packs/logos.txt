@@ -9,8 +9,8 @@ logos/frogDiscord|💌📨📨
 logos/frogDolphinOld|🎮🐬
 logos/frogDolphin|🎮🐬
 logos/frogGentoo|💿
-logos/frogGnome|🗔
-logos/frogKde|🗔
+logos/frogGnome|🖥️
+logos/frogKde|🖥️
 logos/frogMicrosoft|🖥️
 logos/frogNixos|💿
 logos/frogNvidia|🖥️🎮

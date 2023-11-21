@@ -10,7 +10,7 @@ other/frogBatsignal|🌃
 other/frogBeerCan|🍺
 other/frogBeer|🍻🍺
 other/frogBender|🤖
-other/frogBlanket|
+other/frogBlanket|🛌
 other/frogBlunt|🚬
 other/frogCatCostume|🐱
 other/frogCat|🐱
