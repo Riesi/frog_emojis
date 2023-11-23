@@ -15,7 +15,7 @@ other/frogBlunt|🚬
 other/frogCatCostume|🐱
 other/frogCat|🐱
 other/frogChampagne|🍾
-other/frogChronoTrigger|🐲🎮
+other/frogChronoTrigger|🎮
 other/frogCoins|🪙
 other/frogDogCostume|🐶
 other/frogDonut|🍩
