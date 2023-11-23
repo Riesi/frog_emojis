@@ -29,7 +29,7 @@ other/frogHipster|🤓
 other/frogJester|🃏
 other/frogKaiser|👑
 other/frogKing|👑
-other/frogKirby|🍅
+other/frogKirby|🟣
 other/frogMerkel|#️⃣
 other/frogMiddleFinger|🖕
 other/frogMissingTexture|📓
@@ -62,7 +62,7 @@ other/frogTurtle|🐢
 other/frogTuxedoFancy|🤵
 other/frogUwu|😚
 other/frogVodka|🥃
-other/frogWhip|🐸
+other/frogWhip|🔨🏏
 other/frogWhisky|🥃
 other/frogWine|🍷
 other/italicFrog|🐸
