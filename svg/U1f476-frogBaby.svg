@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="36"
    height="36"
    preserveAspectRatio="xMidYMid meet"
@@ -14,8 +7,15 @@
    style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
    version="1.1"
    id="svg5888"
-   sodipodi:docname="BABY_FROG_2.svg"
-   inkscape:version="0.92.4 5da689c313, 2019-01-14">
+   sodipodi:docname="U1f476-frogBaby.svg"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata5894">
     <rdf:RDF>
@@ -40,16 +40,19 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1025"
+     inkscape:window-height="1031"
      id="namedview5890"
      showgrid="false"
-     inkscape:zoom="32"
-     inkscape:cx="21.641655"
-     inkscape:cy="21.250946"
+     inkscape:zoom="4"
+     inkscape:cx="55.875"
+     inkscape:cy="-32.875"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="49"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg5888" />
+     inkscape:current-layer="svg5888"
+     inkscape:showpageshadow="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1" />
   <path
      fill="#C6E5B3"
      d="M36 22c0 7.456-8.059 12-18 12S0 29.456 0 22S8.059 7 18 7s18 7.544 18 15z"
@@ -150,15 +153,4 @@
      inkscape:connector-curvature="0"
      d="m 19.859657,9.568013 c 0.370437,0 0.731144,-0.02452 1.083858,-0.06242 -0.834699,-0.654621 -1.483832,-1.509492 -1.864347,-2.485849 0.95563,0.375979 2.084316,0.594433 3.295708,0.594433 0.370437,0 0.731492,-0.02378 1.084554,-0.06316 C 22.986704,7.3780138 22.667168,7.2663023 22.149,6.685 21.237989,5.975234 19.824906,5.414397 18.541582,5.414397 c -1.719787,0 -3.325594,0.429479 -4.690582,1.270603 0.723499,1.66033 3.134468,2.883006 6.008657,2.883006"
      id="path1000" />
-  <circle
-     style="fill:#ffffff"
-     cx="57.2141"
-     cy="-13.631878"
-     r="7"
-     id="circle1008" />
-  <path
-     style="fill:#ffffff"
-     inkscape:connector-curvature="0"
-     d="m 89.540101,-13.629878 c 0,3.865 -3.135,6.996 -7,6.996 -3.865,0 -7,-3.131 -7,-6.996 0,-3.867 3.135,-7 7,-7 3.865,0 7,3.137 7,7"
-     id="path1014" />
 </svg>
