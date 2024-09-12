@@ -10,10 +10,10 @@
    sodipodi:docname="frogStalker.svg"
    x="0px"
    y="0px"
-   viewBox="0 0 42.9 42.9"
+   viewBox="0 0 428.99998 428.99998"
    xml:space="preserve"
-   width="42.900002"
-   height="42.900002"
+   width="429"
+   height="429"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -35,12 +35,12 @@
    inkscape:pageopacity="0"
    inkscape:pagecheckerboard="1"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="8.9393936"
-   inkscape:cx="15.269492"
-   inkscape:cy="32.832205"
+   inkscape:zoom="17.878787"
+   inkscape:cx="419.40764"
+   inkscape:cy="418.68052"
    inkscape:window-width="1920"
    inkscape:window-height="1031"
-   inkscape:window-x="1920"
+   inkscape:window-x="0"
    inkscape:window-y="49"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg2" />
@@ -64,7 +64,8 @@
 <g
    id="g7"
    clip-path="url(#clipPath31)"
-   inkscape:label="g7"><g
+   inkscape:label="g7"
+   transform="scale(9.9999997)"><g
      id="g4">
 	<rect
    id="rect981"
